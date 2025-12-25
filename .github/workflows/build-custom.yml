@@ -16,6 +16,11 @@ on:
             - 'RKSU'
             - 'YCRKSU'
             - 'XXKSU'
+        UPLOAD_TO_GH:
+          required: true
+          type: boolean
+          description: "上传至 Github Action(如果你跑得多的话就关掉，走TG上传)"
+          default: true
         BBG:
           type: boolean
           description: "启用 BBG"
@@ -148,6 +153,7 @@ jobs:
          zip -q -r "../AnyKernel3_Op_ACE6.zip" ./*
 
       - name: Upload
+        if: inputs.UPLOAD_TO_GH
         uses: actions/upload-artifact@v4
         with:
           name: Anykernel3

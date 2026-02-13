@@ -11,7 +11,7 @@ It includes GitHub Actions workflow files and prebuilt auxiliary tools, without 
 
 The prebuilt tool `scripts/configure` acts as a build-time helper:
 
-- Only when specific features (KPN) are enabled, it automatically modifies  arch/arm64/Makefile  and applies patches, ensuring the final kernel image has the target features integrated as expected.
+- Only when specific features (KPM) are enabled, it automatically modifies `arch/arm64/Makefile` and applies patches, ensuring the final kernel image has the target features integrated as expected.
 - It includes strict whitelist and blacklist verification logic: whitelisted users get unrestricted access to all features, while blacklisted users will have the entire build process directly blocked.
 
 ## Usage

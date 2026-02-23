@@ -52,7 +52,7 @@ on:
           default: false
 jobs:
   Build-Kernel:
-    name: "Build kernel normal"
+    name: "Build kernel with ${{ github.event.inputs.KSU }}"
     runs-on: ubuntu-latest
     env:
       CCACHE_COMPILERCHECK: "%compiler% -dumpmachine; %compiler% -dumpversion"
